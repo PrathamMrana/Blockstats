@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .profile {
+            text-align: center; 
+            margin-top: 20px;
+           
+        }
+        .profile img {
+            border-radius: 50%;
+        }
+        u{
+          align-items: center;
+        }
+        
+      
+        .crypto-list {
+            max-width: 2000px;
+            height: 500px;
+            padding: 50px;
+            overflow-y: auto;
+            text-align: start;
+            background-color: #242323;
+            border-radius: 8px;
+        }
+        .crypto-list div {
+            padding: 20px;
+            height: 40px;
+            border-bottom: 1px solid #f6f1f1;
+        } 
+        .google-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #db4437;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .google-btn img {
+            width: 20px;
+            margin-right: 10px;
+        }
+    </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<ul>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="Signin.html">Signin</a></li>
+    <li><a href="login.html">Login</a></li>
+
+  <li><a href="crs.HTML">crs</a></li>
+  <li><a   href="home.html">Home</a></li>
+  <li2><img src="logo.jpg" width="100" height="100"></li2>
+  <li2><H1><a href="home.html">BLOCKSTATS</a></H1></li2>
+  </ul>
+  
+
+        <div class="profile">
+    
+          <div class="container2">
+          
+      <br>
+      <div class="crypto-list">
+        <div><img src="bitcoin.png" alt="." height="40px" width="40px">Bitcoin (BTC)</div>
+        <div><img src="ethereum.png" alt="." height="40px" width="40px">  Ethereum (ETH)</div>
+        <div><img src="litecoin.png" alt="."height="40px" width="40px">Litecoin (LTC)</div>
+        <div><img src="polygon.png" alt="." height="40px" width="40px">Polygon</div>
+        <div><img src="tether.png" alt=""height="40px" width="40px">Tether</div>
+        <div><img src="stellar.png" alt="."height="40px" width="40px">Stellar (XLM)</div>
+        <div><img src="binancecoin.png" alt="." height="40px" width="40px">Binance Coin (BNB)</div>
+        <div><img src="chainlink.png" alt="." height="40px" width="40px">Chainlink (LINK)</div>
+        
+    </div>
+    <script>
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        document.getElementById("google-signin").addEventListener("click", () => {
+            auth.signInWithPopup(provider)
+                .then((result) => {
+                    console.log("User Info:", result.user);
+                })
+                .catch((error) => {
+                    console.error("Error signing in with Google:", error);
+                });
+        });
+    </script>
+    </div>
+      <footer>
+        <p><a href="mailto:23ceuos001@ddu.ac.in"> 23ceuos001@ddu.ac.in</a></p>
+       <p> &copy; 2024 created by : Pushpraj</p>
+      </footer>
+
+</body>
+</html>
+
+

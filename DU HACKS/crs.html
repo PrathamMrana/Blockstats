@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Layout Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background-color: #1f2937;
+            color: white;
+            padding: 1rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .nav-links a:hover {
+            color: #d1d5db;
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .left-section {
+            border-radius: 5px;
+            margin: 10px;
+            width: 50%;
+            background-color:rgb(53, 63, 68);
+            padding: 2rem;
+        }
+
+        .right-section {
+            border-radius: 5px;
+            margin: 10px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-segment, .bottom-segment {
+            height: 50%;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .top-segment {
+            border-radius: 5px;
+            margin: 20px;
+            background-color: rgb(53, 63, 68);
+            height: 100%;
+        }
+
+        .bottom-segment {
+            background-color: #1687f7;
+        }
+
+        h2 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            background-color: rgb(0, 0, 0);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            height: 80%;
+        }
+
+        .bottom-segment .card {
+            background-color: #f3f4f6;
+        }
+
+        .card h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #4b5563;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            font-size: 1.125rem;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    
+<ul>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="Signin.html">Signin</a></li>
+    <li><a href="login.html">Login</a></li>
+
+  <li><a href="acc.html">Academics</a></li>
+  <li><a href="hob.HTML">Hobbies</a></li>
+  <li><a href="ach.HTML">Achievement</a></li>
+  <li><a href="sta.HTML">Startup ideas</a></li>
+  <li><a href="crs.HTML">crs</a></li>
+  <li><a  class="active"  href="home.html">Home</a></li>
+  <li2><H1><a href="home.html">BLOCKSTATS</a></H1></li2>
+  </ul>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h2>Left Section</h2>
+            <div class="text-content">
+                <p>This is the left section of the website. It maintains a fixed height and doesn't scroll independently.</p>
+                <img src="https://images.unsplash.com/photo-1682687220742-aba19b51f36d" alt="Scenic landscape">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+
+        <!-- Right Section with Scrollable Segments -->
+        <div class="right-section">
+            <!-- Top Segment -->
+            <div class="top-segment">
+                <h3>Top Right Section</h3>
+                <div class="card">
+                    <h4>Item 1</h4>
+                    <p>This is a scrollable content item in the top right section. You can add as many items as needed, and they will scroll independently.</p>
+                </div>
+                <button class="button">Predict</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
