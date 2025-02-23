@@ -1,4 +1,4 @@
-#🚀 Blockstats - The Cryptocurrency Price Predictor
+# Blockstats - The Cryptocurrency Price Predictor 📈
 
 Blockstats is a powerful web application designed for real-time analysis and price prediction of various cryptocurrencies. It offers accurate insights into market trends, empowering traders to anticipate price fluctuations with confidence.
 
